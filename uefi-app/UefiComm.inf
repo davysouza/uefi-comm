@@ -1,0 +1,21 @@
+# Variables defined to be used during the build process
+[Defines]
+  INF_VERSION       = 1.25
+  BASE_NAME         = UefiComm
+  FILE_GUID         = d0956d2c-c033-45af-8ef2-76c9d30528aa
+  MODULE_TYPE       = UEFI_APPLICATION
+  VERSION_STRING    = 1.0
+  ENTRY_POINT       = EntryPoint
+
+# Source code to be compiled
+[Sources]
+  EntryPoint.c
+
+# Required packages
+[Packages]
+  MdePkg/MdePkg.dec          # Contains Uefi and UefiLib
+
+# Required libraries
+[LibraryClasses]
+  UefiApplicationEntryPoint  # UEFI application entry point
+  UefiLib                    # UefiLib
